@@ -1,7 +1,9 @@
 from decimal import Decimal, getcontext
 from shapely.ops import unary_union
-from tree import ChristmasTree
-from collision import check_no_overlap
+
+from src.tree import ChristmasTree
+from src.collision import check_no_overlap
+
 
 getcontext().prec = 25
 SCALE = Decimal('1e18')

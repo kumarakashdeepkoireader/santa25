@@ -7,7 +7,14 @@ from itertools import product
 from concurrent.futures import ProcessPoolExecutor, as_completed
 
 import pandas as pd
-from score import score_submission
+import sys
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+sys.path.append(str(PROJECT_ROOT))
+
+
+from src.score import score_submission
 
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS_DIR = ROOT / "overnight_search" / "results"
